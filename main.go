@@ -17,7 +17,7 @@ func setupRoutes(app *fiber.App) {
 		return c.Status(fiber.StatusOK).JSON(fiber.Map{
 			"success":     true,
 			"message":     "** You are at the root endpoint **",
-			"github_repo": "R-D-G",
+			"github_repo": "https://github.com/R-D-G/Covid19API-s",
 		})
 	})
 
