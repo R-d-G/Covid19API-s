@@ -1,0 +1,33 @@
+basePath: /
+consumes:
+- application/json
+info:
+  description: Documentation for Coviddata API
+  title: of Coviddata API
+  version: 1.0.0
+paths:
+  /api/Coviddatas:
+    get:
+      description: Return a success response
+      operationId: fetchAndStoreCoviddata
+      responses:
+        "200":
+          $ref: '#/responses/successMeassage'
+      tags:
+      - Coviddatas
+  /api/GPSbasedcoviddata:
+    get:
+      description: Return a coviddata object
+      operationId: gPSbasedcoviddata
+      responses:
+        "200":
+          $ref: '#/responses/coviddataResponse'
+        "404":
+          $ref: '#/responses/errorResponse'
+      tags:
+      - GPSbasedcoviddata
+produces:
+- application/json
+schemes:
+- http
+swagger: "2.0"
